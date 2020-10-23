@@ -11,10 +11,11 @@ import org.koin.core.inject
 class GPSTestWORK(
     context: Context,
     workerParameters: WorkerParameters,
-    private val repository2 : GpsWorkMDataSource
-) : CoroutineWorker(context,workerParameters), KoinComponent {
+    //private val repository2 : GpsWorkMDataSource
+) : CoroutineWorker(context,workerParameters) , KoinComponent {
 
-    //private val repository2 by inject<GpsWorkMDataSource>()
+
+    private val repository2 by inject<GpsWorkMDataSource>()
 
     companion object {
         const val WORKER_ID = "GPSSaveWorkerID"

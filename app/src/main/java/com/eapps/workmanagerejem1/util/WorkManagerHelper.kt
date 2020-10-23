@@ -37,4 +37,5 @@ open class WorkManagerHelper(private val workManager: WorkManager) {
     fun stopSynchronization(){
         workManager.cancelUniqueWork(GPSTestWORK.WORKER_ID)
     }
+
 }
